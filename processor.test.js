@@ -19,7 +19,7 @@ describe("transmission processor", function () {
         expect(result.id).not.toEqual(undefined);
     });
 
-    test("id must me Number", function () {
+    test("id must be a Number", function () {
         let result = processor("9701::<489584872710>");
         expect(result.id).toEqual(9701);
     })
@@ -28,5 +28,10 @@ describe("transmission processor", function () {
         let result = processor("9701::<489584872710>");
         expect(result.rawData).not.toEqual(undefined);
     });
+
+    test("rawData must be a String", function () {
+        let result = processor("9701::<489584872710>");
+        expect(result.rawData).toEqual("<489584872710>")
+    })
 
 });
