@@ -19,7 +19,7 @@ describe("transmission processor", function () {
         expect(result.id).not.toEqual(undefined);
     });
 
-    test("id must be a Number", function () {
+    test("Convert id to a Number", function () {
         let result = processor("9701::<489584872710>");
         expect(result.id).toEqual(9701);
     })
